@@ -15,8 +15,8 @@
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <a class="navbar-brand font-weight-bold" href="#">Shivi</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,86 +25,88 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Youtube Video Downloader <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Mp3 Converter</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
+                            Language
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" href="#">English</a>
+                            <a class="dropdown-item" href="#">Hindi</a>
+                            <a class="dropdown-item" href="#">French</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
+                    
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
         </nav>
-        <div class="jumbotron">
+        <div class="jumbotron mt-5 text-center">
             <h2>Download Video & Audio from Youtube</h2>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <form class="form-inline my-2 my-lg-0 justify-content-center pt-5">
+                <input class="form-control mr-sm-2 border-success" type="search" placeholder="Search" aria-label="Search" style="width: 50%;">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Download</button>
             </form>
         </div>
 
-        <div class="container">
+        {% block body %}
+
+        {% endblock %}
+
+        <div class="container text-center mt-5">
             <h4>About</h4>
             <p>Shivi Youtube video Downloader helps you to download video from Youtube. It is fast as your requirement.
                 You can choose variety of formatea and qualities to download
             </p>
         </div>
 
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename = '/img/clock.png')}}" class="card-img-top img-reponsive" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Fast Downloading</h5>
+                        <p class="card-text">Using our Youtube downloader is the fast and easy way to download 
+                            and save any YouTube video to MP3 or MP4..</p>
 
                     </div>
                 </div>
             </div>
             <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename = '/img/infinite.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Unlimited Download</h5>
+                        <p class="card-text">Download and convert YouTube videos as much as you want without 
+                            limitation and always free.</p>
 
                     </div>
                 </div>
             </div>
             <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename = '/img/shield.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">100% Secure</h5>
+                        <p class="card-text">With the rising awareness of device security, people attach great importance to 
+                            personal data. The service is totally 
+                            clean with no virus </p>
 
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container text-center mt-5 py-3">
             <p>@2021 Shihna.com</p>
-            <p><span>About</span><span>FAQ</span><span>Contact</span><span>Terms of Services</span><span>Privacy Policy</span></p>
+            <p><a href="#">About</a><a href="#">FAQ</a><a href="#">Contact</a><a href="#">Privacy Policy</a></p>
         </div>
     </div>
 
